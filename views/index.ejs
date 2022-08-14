@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/global.css">
+</head>
+<body>
+
+<link rel="stylesheet" href="../stylesheets/style.css">
+
+<div id="back">
+    <div id="overlay">
+        <div id="left">
+            <img src="https://img.freepik.com/premium-photo/3d-pile-facebook-logo-background-facebook-famous-social-media-platform_73903-705.jpg?w=2000" alt="">
+        </div>
+        <div id="right">
+            <h2>Create New Account on <br><span>My Facebook</span></h2>
+            <p>Life is better with friends.</p>
+            <form action="/reg" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <% if(errors){ %>
+                  <% errors.forEach(function(err){ %>
+                  <small> <%= err.msg %> </small>   
+               <%  })%>
+                 
+                <%} %>
+                <input type="username" name="username" placeholder="Username" required>
+                <input type="Age" name="Age" placeholder="Age" required>
+                <input type="Aender" name="Gender" placeholder="Gender" required>
+                <input type="submit" value="Register as an User">
+                <a href="/login">Already have an account !?</a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
